@@ -65,10 +65,17 @@
     11839.8215267723,   12543.853951415975];
 
     document.getElementById("myButton").addEventListener("click", function (e) {
-        //calculate the freq
+        
 
-        var inputNumber = document.getElementById("myInput").value;
-        document.getElementById("outputText").innerHTML = "Lösung " + allFrequencies[inputNumber];
+        function calulateFrequency(){
+            var inputNumber = document.getElementById("myInput").value;
+            if(inputNumber <= 127 && >= 0 && inputNumber !== ""){
+                document.getElementById("outputText").innerHTML = "Lösung " + allFrequencies[inputNumber];
+            }
+            else{
+                document.getElementById("outputText").innerHTML = "Fehler!";
+            }
+        }
 
         
     });
