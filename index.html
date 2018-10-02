@@ -13,6 +13,8 @@
 
     <button id="myButton" type="button">klick to convert</button>
 
+    <div id ="outputText"> </div>
+
     <p id="demo"></p>
 
     <script>
@@ -62,10 +64,12 @@
     9956.06347910659,   10548.081821211836, 11175.303405856126,
     11839.8215267723,   12543.853951415975];
 
-    document.getElementById("myButton").addEventListener("mouseup", function (e) {
+    document.getElementById("myButton").addEventListener("click", function (e) {
         //calculate the freq
 
         var inputNumber = document.getElementById("myInput").value;
+        document.getElementById("outputText").innerHTML = "Lösung " + allFrequencies[inputNumber];
+
         
     });
 
