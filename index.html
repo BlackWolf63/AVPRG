@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,29 +7,103 @@
             background-color: red;
         }*/
 
-        body {
+        /*body {
             background-color: brown;
-        }
+        }*/
+
     </style>
 
     <title>Page Title</title>
 </head>
 <body>
 
-    <h1>This is a Heading</h1>
+ -<h1>This is a Heading</h1>
     <p>This is a change.</p>
 
-    <input type="test" id="myInput">
 
-
-    <button id="myButton" >klick to convert</button>
+    <button id="Button1" >1</button>
+    <button id="Button2" >2</button>
+    <button id="Button3" >3</button>
+    <button id="Button4" >4</button>
 
     <div id ="outputText"> </div>
 
     <p id="demo"></p>
 
-    <script src="converter.js">
+    <script>
+    
+    document.getElementById("Button1").addEventListener("click", function() {
+        
+        document.getElementById("outputText").innerHTML = "Test1";
 
+        var context = new AudioContext(),
+        sound = new Audio("sounds/sound1.wav"),
+        soundNote = context.createMediaElementSource(sound);
+        var gainNode = context.createGain();
+
+        gainNode.gain.value = 0.8;
+
+        soundNote.connect(gainNode);
+        gainNode.connect(context.destination);
+
+        sound.play();
+    });
+
+    document.getElementById("Button2").addEventListener("click", function() {
+        
+        document.getElementById("outputText").innerHTML = "Test2";
+
+        var context = new AudioContext(),
+        sound = new Audio("sounds/sound2.wav"),
+        soundNote = context.createMediaElementSource(sound);
+        var gainNode = context.createGain();
+
+        gainNode.gain.value = 0.8;
+
+        soundNote.connect(gainNode);
+        gainNode.connect(context.destination);
+
+        sound.play();
+    });
+        
+    document.getElementById("Button3").addEventListener("click", function() {
+        
+        document.getElementById("outputText").innerHTML = "Test3";
+
+        var context = new AudioContext(),
+        sound = new Audio("sounds/sound3.wav"),
+        soundNote = context.createMediaElementSource(sound);
+        var gainNode = context.createGain();
+
+        gainNode.gain.value = 0.8;
+
+        soundNote.connect(gainNode);
+        gainNode.connect(context.destination);
+
+        sound.play();
+    });
+        
+    document.getElementById("Button4").addEventListener("click", function() {
+        
+        document.getElementById("outputText").innerHTML = "Test4";
+
+        var context = new AudioContext(),
+        sound = new Audio("sounds/sound4.wav"),
+        soundNote = context.createMediaElementSource(sound);
+        var gainNode = context.createGain();
+
+        gainNode.gain.value = 0.8;
+
+        soundNote.connect(gainNode);
+        gainNode.connect(context.destination);
+
+        sound.play();
+    });
+
+
+
+
+    
 
     </script>
 
